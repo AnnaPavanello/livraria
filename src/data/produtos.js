@@ -1,72 +1,200 @@
-// Este arquivo é um módulo JavaScript que exporta uma lista de produtos, representando livros disponíveis para compra. Cada produto é um objeto com propriedades como id, título, autor, resenha, preço e capa (URL da imagem). Esta lista pode ser importada e utilizada em outros componentes do aplicativo para exibir os produtos aos usuários, permitindo que eles naveguem pelos livros disponíveis e adicionem itens ao carrinho de compras. Não se limitem a esses livros sugeridos. Fiquem a vontade para aumentar esta base de dados de livros para serem apresentados pro usuário. Com uma variedade maior, vocẽs podeao filtrar por autor, por preço, por gênero, etc. E também podem adicionar mais informações sobre os livros, como número de páginas, editora, data de publicação, etc. Quanto mais informações vocês tiverem sobre os livros, melhor será a experiência do usuário ao navegar pelos produtos e tomar decisões de compra.
 export const produtos = [
   {
     id: 1,
-    titulo: 'Clean Code',
-    autor: 'Robert C. Martin',
+    titulo: 'O acordo',
+    autor: 'Elle Kennedy',
     resenha:
-      'Um livro sobre boas práticas de programação, escrita de código limpo e melhoria da qualidade de software.',
-    preco: 129.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg',
+      'Hannah faz um acordo com Garrett, astro do hóquei da universidade: ela o ajuda a melhorar suas notas e ele a ajuda a chamar a atenção de outro garoto. O plano se transforma em um romance intenso e divertido.',
+    preco: 79.90,
+    capa: 'https://down-br.img.susercontent.com/file/br-11134207-820lk-mn4tflyra3nm07.jpeg',
   },
   {
     id: 2,
-    titulo: 'The Pragmatic Programmer',
-    autor: 'Andrew Hunt e David Thomas',
+    titulo: 'O erro',
+    autor: 'Elle Kennedy',
     resenha:
-      'Uma obra clássica sobre postura profissional, organização e boas práticas no desenvolvimento de software.',
-    preco: 149.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg',
+      'John Logan está acostumado a conseguir o que quer, mas uma escolha errada o afasta da garota por quem se apaixonou. Ele precisa reconquistá-la e lidar com suas emoções.',
+    preco: 74.90,
+    capa: 'https://m.media-amazon.com/images/I/81pcks3r0FL._UF1000,1000_QL80_.jpg',
   },
   {
     id: 3,
-    titulo: 'Eloquent JavaScript',
-    autor: 'Marijn Haverbeke',
+    titulo: 'O jogo',
+    autor: 'Elle Kennedy',
     resenha:
-      'Uma introdução prática à linguagem JavaScript, com exemplos e conceitos fundamentais para desenvolvimento web.',
+      'Dean nunca levou relacionamentos a sério, até conhecer Allie. O romance desafia suas convicções e o faz amadurecer em meio a momentos divertidos e emocionantes.',
     preco: 89.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9781593279509-L.jpg',
+    capa: 'https://covershttps://m.media-amazon.com/images/I/81EhO2StDkL._AC_UF1000,1000_QL80_.jpg.openlibrary.org/b/isbn/9781593279509-L.jpg',
   },
   {
     id: 4,
-    titulo: "You Don't Know JS Yet",
-    autor: 'Kyle Simpson',
-    resenha: 'Livro voltado ao aprofundamento dos principais conceitos da linguagem JavaScript.',
-    preco: 79.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9781091210092-L.jpg',
+    titulo: "A conquista",
+    autor: 'Elle Kennedy',
+    resenha:
+      'Tucker acredita ter encontrado o amor verdadeiro, mas a vida coloca desafios inesperados no caminho do casal, exigindo escolhas difíceis e emocionantes.',
+    preco: 74.90,
+    capa: 'https://m.media-amazon.com/images/I/81JvkE8+AuL._UF1000,1000_QL80_.jpg',
   },
   {
     id: 5,
-    titulo: 'Design Patterns',
-    autor: 'Erich Gamma, Richard Helm, Ralph Johnson e John Vlissides',
+    titulo: 'O legado',
+    autor: 'Elle Kennedy',
     resenha:
-      'Livro clássico sobre padrões de projeto e soluções reutilizáveis para problemas comuns de software.',
-    preco: 159.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9780201633610-L.jpg',
+      'O encerramento da série Off-Campus revisita os casais anteriores e mostra como suas vidas evoluíram após os acontecimentos principais, com romance e amadurecimento.',
+    preco: 84.90,
+    capa: 'https://m.media-amazon.com/images/I/812Um5lf8vL._UF1000,1000_QL80_.jpg',
   },
   {
     id: 6,
-    titulo: 'Introduction to Algorithms',
-    autor: 'Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest e Clifford Stein',
-    resenha: 'Referência ampla sobre algoritmos, estruturas de dados e análise de complexidade.',
-    preco: 199.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg',
+    titulo: 'É assim que acaba',
+    autor: 'Colleen Hoover',
+    resenha:
+      'Lily Bloom se apaixona por Ryle, mas precisa lidar com um relacionamento que reproduz ciclos de violência. Uma história emocionante sobre amor, coragem e escolhas difíceis.',
+    preco: 64.90,
+    capa: 'https://m.media-amazon.com/images/I/91r5G8RxqfL.jpg',
   },
   {
     id: 7,
-    titulo: 'Refactoring',
-    autor: 'Martin Fowler',
+    titulo: 'É assim que começa',
+    autor: 'Colleen Hoover',
     resenha:
-      'Apresenta técnicas para melhorar a estrutura interna do código sem alterar seu comportamento externo.',
-    preco: 139.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9780134757599-L.jpg',
+      'Continuação de "É assim que acaba", acompanhando Lily enquanto tenta reconstruir sua vida, superar o passado e descobrir um futuro com Atlas.',
+    preco: 64.90,
+    capa: 'https://m.media-amazon.com/images/I/813TDwBsihL._UF1000,1000_QL80_.jpg',
   },
   {
     id: 8,
-    titulo: 'HTML and CSS',
-    autor: 'Jon Duckett',
-    resenha: 'Livro introdutório e visual sobre construção de páginas web com HTML e CSS.',
-    preco: 99.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9781118008188-L.jpg',
+    titulo: 'O fabricante de lágrimas',
+    autor: 'Erin Doom',
+    resenha:
+      'Nica e Rigel crescem em um orfanato com lendas sombrias. Ao serem adotados pela mesma família, sentimentos complexos e proibidos surgem entre eles.',
+    preco: 69.90,
+    capa: 'https://m.media-amazon.com/images/I/81Vw5NiVLyL.jpg',
+  },
+  {
+    id: 9,
+    titulo: 'O verão que mudou minha vida',
+    autor: 'Jenny Han',
+    resenha:
+      'Belly passa todos os verões na mesma casa de praia. Neste verão, ela percebe que seus sentimentos pelos irmãos Conrad e Jeremiah se tornaram mais intensos.',
+    preco: 59.90,
+    capa: 'https://m.media-amazon.com/images/I/91UjIwmok9L.jpg',
+  },
+  {
+    id: 10,
+    titulo: 'Sem você não é verão',
+    autor: 'Jenny Han',
+    resenha:
+      'Após uma tragédia, Belly precisa lidar com perdas, amadurecimento e sentimentos conflitantes pelos dois irmãos, continuando sua jornada de autodescoberta.',
+    preco: 59.90,
+    capa: 'https://loja.intrinseca.com.br/media/catalog/product/cache/9be4a18bab28be23ebd5cc5c1d1fd2f3/9/7/9788551004463_20230503121555.jpg',
+  },
+  {
+    id: 11,
+    titulo: 'O duque e eu',
+    autor: 'Julia Quinn',
+    resenha:
+      'Daphne Bridgerton e Simon Basset fingem um namoro para afastar pretendentes indesejados. A encenação se torna real e o romance se desenvolve de forma encantadora.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/61AYFaPcRfL._AC_UF1000,1000_QL80_.jpg',
+  },
+  {
+    id: 12,
+    titulo: "O visconde que me amava",
+    autor: 'Julia Quinn',
+    resenha:
+      'Anthony Bridgerton pretende se casar sem amor, mas acaba se apaixonando pela espirituosa Kate Sheffield, irmã da mulher que corteja.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/31EW8B4mxhL._AC_UF1000,1000_QL80_.jpg',
+  },
+  {
+    id: 13,
+    titulo: 'Um perfeito cavaleiro',
+    autor: 'Julia Quinn',
+    resenha:
+      'Inspirado em Cinderela, acompanha Benedict Bridgerton e Sophie Beckett em uma história de amor marcada por diferenças sociais e surpresas românticas.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/613oBvthdxL._AC_UF1000,1000_QL80_.jpg',
+  },
+  {
+    id: 14,
+    titulo: 'Os segredos de Colin Bridgerton',
+    autor: 'Julia Quinn',
+    resenha:
+      'Penelope ama Colin há anos. Quando ele finalmente a enxerga, segredos e emoções escondidas vêm à tona, transformando o romance deles.',
+   preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/81dFPdZis+L._AC_UF1000,1000_QL80_.jpg',
+  },
+  {
+    id: 15,
+    titulo: 'Para Sir Phillip, com amor',
+    autor: 'Julia Quinn',
+    resenha:
+      'Eloise Bridgerton inicia uma correspondência com Sir Phillip e decide conhecê-lo, encontrando muito mais do que esperava em termos de amor e aventura.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/91GtrmKsjUL.jpg',
+  },
+  {
+    id: 16,
+    titulo: 'O conde enfeitiçado',
+    autor: 'Julia Quinn',
+    resenha:
+      'Francesca Bridgerton enfrenta o luto e descobre uma nova chance de amar ao lado de Michael Stirling, numa história doce e envolvente.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/81EEhZOy26L.jpg',
+  },
+  {
+    id: 17,
+    titulo: 'Um beijo inesquecível',
+    autor: 'Julia Quinn',
+    resenha:
+      'Hyacinth Bridgerton e Gareth St. Clair se unem para desvendar mistérios familiares e acabam se apaixonando de maneira inesperada e encantadora.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/61RwAQuKKHL.jpg',
+  },
+  {
+    id: 18,
+    titulo: 'A caminho do altar',
+    autor: 'Julia Quinn',
+    resenha:
+      'Gregory Bridgerton acredita ter encontrado o amor verdadeiro, mas percebe que seu coração pertence a outra pessoa, entre escolhas e romance.',
+    preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/71F7XNElBxL.jpg',
+  },
+  {
+    id: 19,
+    titulo: 'E viveram felizes para sempre',
+    autor: 'Julia Quinn',
+    resenha:
+      'Coletânea de epílogos que mostra o que aconteceu com os casais da série Bridgerton após seus finais felizes, com romance e humor.',
+   preco: 54.90,
+    capa: 'https://m.media-amazon.com/images/I/71WbKn76jkL.jpg',
+  },
+  {
+    id: 20,
+    titulo: "Para todos os garotos que eu já amei",
+    autor: 'Jenny Han',
+    resenha:
+      'As cartas secretas de amor de Lara Jean são enviadas sem sua permissão, mudando completamente sua vida amorosa e trazendo confusões divertidas.',
+     preco: 49.90,
+    capa: 'https://m.media-amazon.com/images/I/71vGDXuc7uS._AC_UF1000,1000_QL80_.jpg',
+  },
+  {
+    id: 21,
+    titulo: 'P.S. Ainda amo você',
+    autor: 'Jenny Han',
+    resenha:
+      'Lara Jean tenta seguir em frente, mas quando um dos destinatários de suas cartas retorna, ela precisa lidar com sentimentos antigos e novos.',
+     preco: 49.90,
+    capa: 'https://m.media-amazon.com/images/I/61L7VgohrPS._AC_UF1000,1000_QL80_.jpg',
+  },
+  {
+    id: 22,
+    titulo: 'Agora e para sempre, Lara Jean',
+    autor: 'Jenny Han',
+    resenha:
+      'Lara Jean e Peter enfrentam os desafios de um relacionamento à distância, amadurecimento e decisões sobre o futuro juntos.',
+     preco: 49.90,
+    capa: 'https://m.media-amazon.com/images/I/71QdZNZedBL._AC_UF1000,1000_QL80_.jpg',
   },
 ]
