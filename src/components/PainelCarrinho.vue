@@ -33,7 +33,7 @@
 <script>
 import ItemCarrinho from './ItemCarrinho.vue'
 import ResumoCarrinho from './ResumoCarrinho.vue'
-import { totalItens, totalValor } from '@/utils/carrinhoUtils'
+import { totalItens, totalValor } from '../utils/carrinhoUtils.js'
 
 export default {
   name: 'PainelCarrinho',

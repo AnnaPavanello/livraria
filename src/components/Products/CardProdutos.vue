@@ -1,6 +1,22 @@
+<script>
+import { formatarMoeda } from '@/utils/carrinhoUtils';
+
+export default {
+  name: 'CardProduto',
+  props: {
+    produto: {
+      type: Object,
+      required: true
+    }
+  },
+  emits: ['adicionar-ao-carrinho'],
+  methods: { formatarMoeda }
+}
+</script>
+
 <template>
   <div class="card-produto">
-    <img :src="produto.imagem" :alt="produto.titulo" class="imagem-produto" />
+    <img :src="produto.capa" :alt="produto.titulo" class="imagem-produto" />
     <div class="info-produto">
       <span class="categoria">{{ produto.categoria }}</span>
       <h3>{{ produto.titulo }}</h3>
@@ -15,22 +31,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { formatarMoeda } from '@/utils/moedaUtils'
-
-export default {
-  name: 'CardProduto',
-  props: {
-    produto: {
-      type: Object,
-      required: true
-    }
-  },
-  emits: ['adicionar-ao-carrinho'],
-  methods: { formatarMoeda }
-}
-</script>
 
 <style scoped>
 .card-produto {

@@ -6,7 +6,7 @@ export const produtos = [
     resenha:
       'Hannah faz um acordo com Garrett, astro do hóquei da universidade: ela o ajuda a melhorar suas notas e ele a ajuda a chamar a atenção de outro garoto. O plano se transforma em um romance intenso e divertido.',
     preco: 79.90,
-    capa: 'https://down-br.img.susercontent.com/file/br-11134207-820lk-mn4tflyra3nm07.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/81z+0LS86bL._SL1500_.jpg',
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const produtos = [
     resenha:
       'Dean nunca levou relacionamentos a sério, até conhecer Allie. O romance desafia suas convicções e o faz amadurecer em meio a momentos divertidos e emocionantes.',
     preco: 89.9,
-    capa: 'https://covershttps://m.media-amazon.com/images/I/81EhO2StDkL._AC_UF1000,1000_QL80_.jpg.openlibrary.org/b/isbn/9781593279509-L.jpg',
+    capa: 'https://m.media-amazon.com/images/I/81EhO2StDkL._AC_UF1000,1000_QL80_.jpg',
   },
   {
     id: 4,

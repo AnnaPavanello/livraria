@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { formatarMoeda } from '@/utils/moedaUtils'
+import { formatarMoeda } from '@/utils/carrinhoUtils';
 
 export default {
   name: 'ItemCarrinho',

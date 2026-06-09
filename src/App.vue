@@ -24,17 +24,17 @@
 </template>
 
 <script>
-import AppHeader from '@/components/layout/AppHeader.vue'
-import ListaProdutos from '@/components/products/ListaProdutos.vue'
-import PainelCarrinho from '@/components/cart/PainelCarrinho.vue'
-import produtos from '@/data/produtos.js'
+import AppHeader from './components/AppHeader.vue'
+import ListaProdutos from './components/Products/ListaProdutos.vue'
+import PainelCarrinho from './components/PainelCarrinho.vue'
+import { produtos } from './data/produtos.js'
 import {
   adicionarItem,
   removerItem,
   aumentarQuantidade,
   diminuirQuantidade,
   totalItens
-} from '@/utils/carrinhoUtils'
+} from './utils/carrinhoUtils'
 
 export default {
   name: 'App',
