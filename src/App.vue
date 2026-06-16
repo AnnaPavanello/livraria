@@ -1,84 +1,105 @@
-<template>
- <div id="app">
-    <AppHeader
-      :totalItens="totalCarrinho"
-      @abrir-carrinho="carrinhoAberto = !carrinhoAberto"
-    />
+<script setup>
+import { ref, computed } from 'vue'
 
-<main>
-      <ListaProdutos
-        :produtos="produtos"
-        @adicionar-ao-carrinho="handleAdicionarAoCarrinho"
-      />
-    </main>
+import AppHeader from './components/layout/AppHeader.vue'
+import ProductList from './components/products/ProductList.vue'
+import CartPanel from './components/cart/CartPanel.vue'
 
-<PainelCarrinho 
-:carrinho="carrinho"
-      :aberto="carrinhoAberto"
-      @fechar="carrinhoAberto = false"
-      @remover="handleRemover"
-      @aumentar="handleAumentar"
-      @diminuir="handleDiminuir"
-      @finalizar="handleFinalizar" />
-    </div>
-</template>
+import { products } from './data/products'
+import { getCartTotal } from './utils/CartUtils'
 
-<script>
-import AppHeader from '@/components/layout/AppHeader.vue'
-import ListaProdutos from '@/components/products/ListaProdutos.vue'
-import PainelCarrinho from '@/components/cart/PainelCarrinho.vue'
-import produtos from '@/data/produtos.js'
-import {
-  adicionarItem,
-  removerItem,
-  aumentarQuantidade,
-  diminuirQuantidade,
-  totalItens
-} from '@/utils/carrinhoUtils'
+const cart = ref([])
 
-export default {
-  name: 'App',
-  components: { AppHeader, ListaProdutos, PainelCarrinho },
-  data() {
-    return {
-      produtos,
-      carrinho: [],
-      carrinhoAberto: false
-    }
-  },
-  computed: {
-    totalCarrinho() {
-      return totalItens(this.carrinho)
-    }
-  },
-  methods: {
-    handleAdicionarAoCarrinho(produto) {
-      this.carrinho = adicionarItem(this.carrinho, produto)
-      this.carrinhoAberto = true
-    },
-    handleRemover(produtoId) {
-      this.carrinho = removerItem(this.carrinho, produtoId)
-    },
-    handleAumentar(produtoId) {
-      this.carrinho = aumentarQuantidade(this.carrinho, produtoId)
-    },
-    handleDiminuir(produtoId) {
-      this.carrinho = diminuirQuantidade(this.carrinho, produtoId)
-    },
-    handleFinalizar() {
-      alert(` Compra finalizada! Obrigada pela preferência! `)
-      this.carrinho = []
-      this.carrinhoAberto = false
-    }
+function addToCart(product) {
+  const item = cart.value.find(
+    p => p.id === product.id
+  )
+
+  if (item) {
+    item.quantity++
+  } else {
+    cart.value.push({
+      ...product,
+      quantity: 1
+    })
   }
 }
+
+function increase(id) {
+  const item = cart.value.find(
+    p => p.id === id
+  )
+
+  if (item) {
+    item.quantity++
+  }
+}
+
+function decrease(id) {
+  const item = cart.value.find(
+    p => p.id === id
+  )
+
+  if (item && item.quantity > 1) {
+    item.quantity--
+  }
+}
+
+function remove(id) {
+  cart.value = cart.value.filter(
+    p => p.id !== id
+  )
+}
+
+const total = computed(() => {
+  return getCartTotal(cart.value)
+})
+
+const cartQuantity = computed(() => {
+  return cart.value.reduce((total, item) => {
+    return total + item.quantity
+  }, 0)
+})
 </script>
 
-<style scoped>
-* { box-sizing: border-box; margin: 0; padding: 0; }
+<template>
+  <AppHeader :quantity="cartQuantity" />
+
+  <div class="container">
+
+    <div class="products">
+      <ProductList
+        :products="products"
+        @add="addToCart"
+      />
+    </div>
+
+    <CartPanel
+      :cart="cart"
+      :total="total"
+      @increase="increase"
+      @decrease="decrease"
+      @remove="remove"
+    />
+
+  </div>
+</template>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f6f9;
-  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 </style>
